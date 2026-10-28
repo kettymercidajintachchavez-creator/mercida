@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kardex de materiales · Planificador Educativo de Mercida</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="personalizacion.css"></head>
+<body><main>
+<small class="etiqueta" id="etiqueta">ET505 · Semana 9 · Kardex de materiales</small>
+<h1>Kardex de materiales</h1>
+<nav class="menu" aria-label="Módulos"><a href="index.html">Planificador de pedidos (presupuesto)</a><a href="kardex.html" aria-current="page">Kardex (existencias)</a></nav>
+<p>Registre entradas y salidas de materiales ficticios del aula. El kardex controla las <strong>cantidades físicas</strong>; el planificador controla el <strong>dinero</strong> del presupuesto. Son dos datos distintos y no se mezclan.</p>
+<p id="mensaje" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+
+<section><h2>1. Registrar un material</h2>
+<label for="nuevoNombre">Nombre del material</label>
+<input id="nuevoNombre" maxlength="60" placeholder="Ejemplo: tijeras escolares" autocomplete="off">
+<button id="btnAgregar" type="button">Agregar material</button></section>
+
+<section><h2>2. Buscar y editar el nombre</h2>
+<label for="busqueda">Buscar por nombre o código (ejemplo: MAT-001)</label>
+<input id="busqueda" maxlength="60" autocomplete="off">
+<button id="btnBuscar" type="button">Buscar</button>
+<ul id="resultados"></ul>
+<label for="editarNombre">Nuevo nombre del material seleccionado</label>
+<input id="editarNombre" maxlength="60" autocomplete="off" disabled>
+<p id="seleccion">Ningún material seleccionado.</p>
+<button id="btnEditar" type="button">Guardar nuevo nombre</button></section>
+
+<section><h2>3. Registrar entrada o salida</h2>
+<div class="grid3">
+<div><label for="movMaterial">Material</label><select id="movMaterial"></select></div>
+<div><label for="movTipo">Tipo de movimiento</label><select id="movTipo"><option value="entrada">Entrada</option><option value="salida">Salida</option></select></div>
+<div><label for="movCantidad">Cantidad (entero mayor que 0)</label><input id="movCantidad" inputmode="numeric" autocomplete="off"></div>
+</div>
+<button id="btnMover" type="button">Registrar movimiento</button>
+<p class="nota">Existencia = total de entradas − total de salidas.</p></section>
+
+<section><h2>4. Materiales y existencias</h2>
+<div class="tabla"><table><thead><tr><th>ID</th><th>Material</th><th>Estado</th><th>Existencia</th><th>Acciones</th></tr></thead><tbody id="tablaMateriales"></tbody></table></div></section>
+
+<section><h2>5. Historial de movimientos</h2>
+<button id="btnCsv" type="button">Exportar movimientos a CSV</button>
+<p class="nota">El CSV es una copia de los movimientos para abrir en Excel; no hay sincronización con Excel.</p>
+<div class="tabla"><table><thead><tr><th>ID mov.</th><th>Fecha</th><th>Material</th><th>Tipo</th><th>Cantidad</th><th>Saldo</th></tr></thead><tbody id="tablaMovimientos"></tbody></table></div></section>
+
+<small>Use datos ficticios. Los datos se guardan solamente en este navegador y en este origen (localStorage). No hay base de datos compartida entre usuarios ni sincronización automática con Excel.</small>
+</main>
+<script src="kardex.js"></script></body></html>

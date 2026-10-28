@@ -1,0 +1,26 @@
+/* Personalización Semana 9. Se carga DESPUÉS de styles.css y no elimina sus estilos. */
+/* Paleta elegida: azul rgb(30, 64, 175). Texto blanco sobre azul: contraste mayor a 8:1. */
+:root{--azul:rgb(30,64,175);--azul-oscuro:rgb(23,37,84);--azul-claro:rgb(239,246,255)}
+h1,h2{color:var(--azul)}
+button{background:var(--azul);color:#fff}
+button:hover{background:var(--azul-oscuro)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #ecaa22}
+section{border-top:5px solid var(--azul)}
+/* Etiqueta personalizada: texto y tamaño propios */
+.etiqueta{display:inline-block;background:var(--azul-claro);color:var(--azul);font-size:1.15rem;font-weight:700;padding:6px 14px;border-radius:999px;border:1px solid var(--azul)}
+/* Menú entre módulos */
+.menu{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
+.menu a{padding:10px 16px;border-radius:8px;border:2px solid var(--azul);color:var(--azul);font-weight:700;text-decoration:none}
+.menu a[aria-current="page"]{background:var(--azul);color:#fff}
+/* Kardex */
+select{width:100%;padding:12px;border:1px solid #8a9cad;border-radius:7px;font:inherit;background:#fff}
+.grid3{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px}
+.tabla{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th{background:var(--azul);color:#fff;text-align:left;padding:10px}
+td{padding:9px 10px;border-bottom:1px solid #d8e1e9}
+tr.inactivo td{color:#475569;background:#f1f5f9}
+button.peq{padding:7px 12px;margin:2px 6px 2px 0;font-size:.9rem}
+.nota{color:#334155;font-size:.95rem}
+#resultados{list-style:none;padding:0}
+@media(max-width:700px){.grid3{grid-template-columns:1fr}}
