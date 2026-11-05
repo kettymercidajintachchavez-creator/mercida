@@ -102,4 +102,4 @@ Abra `index.html` con Chrome o publique la carpeta con GitHub Pages. Todos los a
 
 ## Publicación
 Repositorio: [pegar aquí el enlace cuando esté publicado]
-Sitio (GitHub Pages): [pegar aquí el enlace cuando esté publicado]
+Sitio (GitHub Pages) https://github.com/kettymercidajintachchavez-creator/mercida.git
