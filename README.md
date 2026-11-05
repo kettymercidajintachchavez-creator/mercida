@@ -101,5 +101,5 @@ El botón «Exportar movimientos a CSV» descarga `kardex_movimientos.csv` (UTF-
 Abra `index.html` con Chrome o publique la carpeta con GitHub Pages. Todos los archivos deben estar juntos en la raíz del repositorio. El informe en PDF se entrega en MAXEDRA y **no** se sube al repositorio.
 
 ## Publicación
-Repositorio:git@github.com:kettymercidajintachchavez-creator/mercida.git
-Sitio (GitHub Pages) https://github.com/kettymercidajintachchavez-creator/mercida.git
+Repositorio: https://github.com/kettymercidajintachchavez-creator/mercida.git
+Sitio (GitHub Pages) 
